@@ -1,10 +1,12 @@
-angular.module('lightbox', ['ngRoute'])
+angular.module('lightbox', ['ngRoute', 'landing', 'gallery'])
   .config(function($routeProvider){
     $routeProvider
     .when('/', {
-      templateUrl: 'landing.html'
+      templateUrl: 'landing.html',
+      controller: 'landingController',
     })
     .when('/lightbox', {
-      templateUrl: 'lightbox.html'
+      templateUrl: 'lightbox.html',
+      controller: 'galleryController',
     })
   })
