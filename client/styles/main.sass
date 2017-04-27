@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:900')
+@import url('https://fonts.googleapis.com/css?family=Roboto:900|Space+Mono:700')
 
-$pink: #DB6EC3
+$green: #67FFB8
 
 body
   margin: 0
 
+
+// =================================
+// LANDING
+// =================================
 .landing
   background:
     image: url(../assets/landing.jpg)
@@ -27,10 +31,16 @@ body
     padding: 0 0.4em
     margin-bottom: 10px
     background: black
-    color: $pink
+    color: $green
     font-size: 100px
     font-family: 'Roboto', sans-serif
     text-transform: uppercase
+
+  h2
+    margin-top: -30px
+    font-family: 'Space Mono', monospace
+    font-size: 30px
+    cursor: pointer
 
 @media (max-width: 1030px)
   .title-container
@@ -48,7 +58,132 @@ body
     margin-bottom: 70%
     span
       font-size: 60px
+    h2
+      font-size: 20px
 @media (max-width: 320px)
   .title-container
     span
       font-size: 40px
+    h2
+      font-size: 15px
+
+
+// =================================
+//  GALLERY
+// =================================
+
+.gallery-container
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.gallery
+  width: 100%
+  max-width: 1200px
+
+  .row:before,
+  .row:after
+    display: table
+    clear: both
+
+  [class*='col-']
+    float: left
+    min-height: 1px
+    width: 16.66%
+    padding: 20px
+
+  col-1
+    width: 16.66%
+
+  img
+    height: 200px
+    width: 200px
+    object-fit: contain
+    cursor: pointer
+
+@media (max-width: 1035px)
+  .gallery
+    img
+      height: 150px
+      width: 150px
+
+@media (max-width: 750px)
+  .gallery
+    img
+      height: 100px
+      width: 100px
+
+@media (max-width: 420px)
+  .gallery
+    img
+      height: 70px
+      width: 70px
+
+// =================================
+// MODAL
+// =================================
+.test-overlay
+  position: fixed
+  background: fade-out($green, 0.20)
+  height: 100vh
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  display: none
+
+
+  .modal
+    max-width: 1000px
+    width: 80%
+    height: 50%
+    padding: 20px
+    padding-bottom: 50px
+    background: white
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.4)
+    position: relative
+    .ion-close-round
+      position: absolute
+      top: -40px
+      right: -40px
+      font-size: 40px
+      cursor: pointer
+      
+    .photo-container
+      width: 100%
+      height: 100%
+      // background: yellow
+
+      .modal-photo
+        max-width: 50%
+        height: 100%
+        // background: pink
+
+
+        img
+          max-width: 100%
+          max-height: 100%
+          height: auto
+          width: auto
+          object-fit: contain
+          flex: 1
+
+      .modal-info
+        position: absolute
+        max-width: 50%
+        height: 100%
+        top: 0
+        right: 0
+        font-family: 'Space Mono', monospace
+        font-size: 50px
+
+@media (max-width: 1020px)
+
+
+@media (max-width: 750px)
+
+@media (max-width: 410px)
