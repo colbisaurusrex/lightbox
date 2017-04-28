@@ -14,9 +14,10 @@
   </div>
   <div class="gallery">
     <div class="row">
-      <div class="col-1" ng-repeat="photo in photos track by $index">
+      <div class="col-1" dir-paginate="photo in photos | itemsPerPage: 20">
         <img  class="clickable" ng-src=https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg` alt="{{photo.title}}">
       </div>
     </div>
   </div>
 </div>
+<dir-pagination-controls template-url="dirPagination.tpl.html"></dir-pagination-controls>
