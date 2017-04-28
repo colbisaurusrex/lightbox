@@ -18,10 +18,15 @@
   },
   "homepage": "https://github.com/colbisaurusrex/lightbox#readme",
   "dependencies": {
+    "angular-utils-pagination": "^0.11.1",
     "express": "^4.15.2",
+    "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.4.1"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
   }
 }
