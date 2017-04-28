@@ -27,6 +27,7 @@ module.exports = {
       }
     ],
   },
+  //TODO: minify the code
   plugins: [new HtmlWebpackPlugin({
     title: 'Lightbox',
     template: 'client/template.html'
