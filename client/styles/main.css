@@ -8,9 +8,15 @@ body {
   background-position: center;
   height: 100vh;
   max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .title-container {
   margin-right: 50%;
@@ -32,6 +38,7 @@ body {
     font-size: 30px;
     cursor: pointer;
     text-transform: uppercase;
+    -webkit-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out; }
     .title-container h2:hover {
       background: #67FFB8; }
@@ -70,9 +77,15 @@ body {
 
 .gallery-container {
   padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .gallery {
   width: 100%;
@@ -91,8 +104,10 @@ body {
   .gallery img {
     height: 200px;
     width: 200px;
-    object-fit: none;
-    object-position: center;
+    -o-object-fit: none;
+       object-fit: none;
+    -o-object-position: center;
+       object-position: center;
     cursor: pointer; }
 
 @media (max-width: 1035px) {
@@ -134,9 +149,15 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: none; }
   .test-overlay .modal {
     max-width: 1000px;
@@ -156,11 +177,15 @@ body {
     .test-overlay .modal .photo-container {
       width: 100%;
       height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 50%;
         height: 100%;
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
         padding-right: 55px; }
         .test-overlay .modal .photo-container .modal-photo img {
           max-width: 100%;
@@ -173,10 +198,17 @@ body {
         padding-top: 0;
         font-family: "Space Mono", monospace;
         font-size: 50px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                    -ms-grid-row-align: center;
+                align-items: center;
         vertical-align: top;
-        justify-content: center;
-        flex: 2; }
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-flex: 2;
+            -ms-flex: 2;
+                flex: 2; }
         .test-overlay .modal .photo-container .modal-info p {
           margin-top: 10px; }
 
@@ -184,11 +216,19 @@ body {
   .test-overlay .modal {
     width: 370px;
     height: auto;
-    align-items: center;
-    justify-content: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .test-overlay .modal .photo-container {
       height: auto;
-      flex-direction: column; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 100%;
         margin-right: 0px;
@@ -200,11 +240,19 @@ body {
   .test-overlay .modal {
     width: 300px;
     height: auto;
-    align-items: center;
-    justify-content: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .test-overlay .modal .photo-container {
       height: auto;
-      flex-direction: column; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 100%;
         padding-right: 0px;
@@ -215,20 +263,26 @@ body {
   .test-overlay .modal {
     width: 200px;
     height: auto;
-    align-items: center;
-    justify-content: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .test-overlay .modal .ion-close-round {
       top: -30px;
       right: -30px;
       font-size: 30px; }
     .test-overlay .modal .photo-container {
       height: auto;
-      flex-direction: column; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 100%;
         padding-right: 0px;
         width: 100%; }
       .test-overlay .modal .photo-container .modal-info {
         font-size: 15px; } }
-
-/*# sourceMappingURL=main.css.map */
