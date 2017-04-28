@@ -25,10 +25,16 @@ body {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase; }
   .title-container h2 {
-    margin-top: -30px;
+    display: inline-block;
+    padding: 20px;
+    margin-top: -20px;
     font-family: "Space Mono", monospace;
     font-size: 30px;
-    cursor: pointer; }
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 200ms ease-in-out; }
+    .title-container h2:hover {
+      background: #67FFB8; }
 
 @media (max-width: 1030px) {
   .title-container {
@@ -73,7 +79,8 @@ body {
   .gallery img {
     height: 200px;
     width: 200px;
-    object-fit: contain;
+    object-fit: none;
+    object-position: center;
     cursor: pointer; }
 
 @media (max-width: 1035px) {
@@ -103,9 +110,9 @@ body {
   .test-overlay .modal {
     max-width: 1000px;
     width: 80%;
-    height: 50%;
+    height: auto;
     padding: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     background: white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
     position: relative; }
@@ -117,24 +124,76 @@ body {
       cursor: pointer; }
     .test-overlay .modal .photo-container {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      display: flex; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 50%;
-        height: 100%; }
+        height: 100%;
+        flex: 1;
+        padding-right: 55px; }
         .test-overlay .modal .photo-container .modal-photo img {
           max-width: 100%;
-          max-height: 100%;
-          height: auto;
-          width: auto;
-          object-fit: contain;
-          flex: 1; }
+          max-height: 100%; }
       .test-overlay .modal .photo-container .modal-info {
-        position: absolute;
         max-width: 50%;
         height: 100%;
         top: 0;
         right: 0;
+        padding-top: 0;
         font-family: "Space Mono", monospace;
-        font-size: 50px; }
+        font-size: 50px;
+        align-items: center;
+        vertical-align: top;
+        justify-content: center;
+        flex: 2; }
+        .test-overlay .modal .photo-container .modal-info p {
+          margin-top: 10px; }
+
+@media (max-width: 1020px) {
+  .test-overlay .modal {
+    width: 370px;
+    height: auto;
+    align-items: center;
+    justify-content: center; }
+    .test-overlay .modal .photo-container {
+      height: auto;
+      flex-direction: column; }
+      .test-overlay .modal .photo-container .modal-photo {
+        max-width: 100%;
+        margin-right: 0px;
+        padding-right: 0px;
+        width: 100%; }
+      .test-overlay .modal .photo-container .modal-info {
+        font-size: 25px; } }
+@media (max-width: 750px) {
+  .test-overlay .modal {
+    width: 300px;
+    height: auto;
+    align-items: center;
+    justify-content: center; }
+    .test-overlay .modal .photo-container {
+      height: auto;
+      flex-direction: column; }
+      .test-overlay .modal .photo-container .modal-photo {
+        max-width: 100%;
+        padding-right: 0px;
+        width: 100%; }
+      .test-overlay .modal .photo-container .modal-info {
+        font-size: 30px; } }
+@media (max-width: 410px) {
+  .test-overlay .modal {
+    width: 200px;
+    height: auto;
+    align-items: center;
+    justify-content: center; }
+    .test-overlay .modal .photo-container {
+      height: auto;
+      flex-direction: column; }
+      .test-overlay .modal .photo-container .modal-photo {
+        max-width: 100%;
+        padding-right: 0px;
+        width: 100%; }
+      .test-overlay .modal .photo-container .modal-info {
+        font-size: 15px; } }
 
 /*# sourceMappingURL=main.css.map */
