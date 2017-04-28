@@ -77,12 +77,21 @@ body
 // =================================
 //  GALLERY
 // =================================
+.pagination
+  font-family: 'Space Mono', monospace
+  text-align: center
+  li
+    display: inline
+    a
+      color: $green
+      font-size: 40px
+      padding: 20px
+      cursor: pointer
 
 .gallery-container
   display: flex
   align-items: center
   justify-content: center
-
 
 .gallery
   width: 100%
@@ -110,22 +119,46 @@ body
     cursor: pointer
 
 @media (max-width: 1035px)
-  .gallery
-    img
-      height: 150px
-      width: 150px
+  .gallery-container
+    margin-top: 100px
+    margin-left: 13%
+    .gallery
+      img
+        height: 150px
+        width: 150px
+  .pagination
+    li
+      a
+        font-size: 30px
+        padding: 10px
 
-@media (max-width: 750px)
-  .gallery
-    img
-      height: 100px
-      width: 100px
+@media (max-width: 770px)
+  .gallery-container
+    margin-top: 0px
+    margin-left: 12%
+    .gallery
+      img
+        height: 100px
+        width: 100px
+  .pagination
+    li
+      a
+        font-size: 20px
+        padding: 5px
 
 @media (max-width: 420px)
-  .gallery
-    img
-      height: 70px
-      width: 70px
+  .gallery-container
+    margin-top: 0px
+    margin-left: 10%
+    .gallery
+      img
+        height: 70px
+        width: 70px
+
+@media (max-width: 325px)
+  .gallery-container
+    margin-top: 0px
+    margin-left: 4%
 
 // =================================
 // MODAL
@@ -236,6 +269,10 @@ body
       height: auto
       align-items: center
       justify-content: center
+      .ion-close-round
+        top: -30px
+        right: -30px
+        font-size: 30px
       .photo-container
         height: auto
         flex-direction: column

@@ -57,6 +57,17 @@ body {
     font-size: 40px; }
   .title-container h2 {
     font-size: 15px; } }
+.pagination {
+  font-family: "Space Mono", monospace;
+  text-align: center; }
+  .pagination li {
+    display: inline; }
+    .pagination li a {
+      color: #67FFB8;
+      font-size: 40px;
+      padding: 20px;
+      cursor: pointer; }
+
 .gallery-container {
   display: flex;
   align-items: center;
@@ -84,17 +95,38 @@ body {
     cursor: pointer; }
 
 @media (max-width: 1035px) {
-  .gallery img {
-    height: 150px;
-    width: 150px; } }
-@media (max-width: 750px) {
-  .gallery img {
-    height: 100px;
-    width: 100px; } }
+  .gallery-container {
+    margin-top: 100px;
+    margin-left: 13%; }
+    .gallery-container .gallery img {
+      height: 150px;
+      width: 150px; }
+
+  .pagination li a {
+    font-size: 30px;
+    padding: 10px; } }
+@media (max-width: 770px) {
+  .gallery-container {
+    margin-top: 0px;
+    margin-left: 12%; }
+    .gallery-container .gallery img {
+      height: 100px;
+      width: 100px; }
+
+  .pagination li a {
+    font-size: 20px;
+    padding: 5px; } }
 @media (max-width: 420px) {
-  .gallery img {
-    height: 70px;
-    width: 70px; } }
+  .gallery-container {
+    margin-top: 0px;
+    margin-left: 10%; }
+    .gallery-container .gallery img {
+      height: 70px;
+      width: 70px; } }
+@media (max-width: 325px) {
+  .gallery-container {
+    margin-top: 0px;
+    margin-left: 4%; } }
 .test-overlay {
   position: fixed;
   background: rgba(103, 255, 184, 0.8);
@@ -186,6 +218,10 @@ body {
     height: auto;
     align-items: center;
     justify-content: center; }
+    .test-overlay .modal .ion-close-round {
+      top: -30px;
+      right: -30px;
+      font-size: 30px; }
     .test-overlay .modal .photo-container {
       height: auto;
       flex-direction: column; }
