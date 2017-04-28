@@ -20,4 +20,5 @@ angular.module('lightbox', ['ngRoute', 'landing', 'gallery', 'angularUtils.direc
       template: galleryHTML,
       controller: 'galleryController',
     })
+    //TODO: add html to render in case of errors
   })
