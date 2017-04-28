@@ -1,9 +1,10 @@
+const $ = require('jquery')
 $(document).ready(function () {
     $(document).on('click', '.clickable', function (e){
       e.preventDefault();
-      let imgURL = this.src;
-      let text = this.alt;
-      $('.modal-photo img').attr('src', imgURL)
+      const imgUrl = this.src;
+      const text = this.alt;
+      $('.modal-photo img').attr('src', imgUrl)
       $('.modal-info p').html(text)
       $('.test-overlay').css('display', 'flex')
       return false;
