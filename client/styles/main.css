@@ -8,15 +8,9 @@ body {
   background-position: center;
   height: 100vh;
   max-width: 1440px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  align-items: center;
+  justify-content: center; }
 
 .title-container {
   margin-right: 50%;
@@ -27,6 +21,7 @@ body {
     margin-bottom: 10px;
     background: black;
     color: #67FFB8;
+    border-radius: 10px;
     font-size: 100px;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase; }
@@ -34,14 +29,16 @@ body {
     display: inline-block;
     padding: 20px;
     margin-top: -20px;
+    color: #67FFB8;
     font-family: "Space Mono", monospace;
     font-size: 30px;
     cursor: pointer;
     text-transform: uppercase;
-    -webkit-transition: all 200ms ease-in-out;
+    border-radius: 10px;
     transition: all 200ms ease-in-out; }
     .title-container h2:hover {
-      background: #67FFB8; }
+      background: #67FFB8;
+      color: black; }
 
 @media (max-width: 1030px) {
   .title-container {
@@ -77,15 +74,9 @@ body {
 
 .gallery-container {
   padding-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  align-items: center;
+  justify-content: center; }
 
 .gallery {
   width: 100%;
@@ -104,10 +95,8 @@ body {
   .gallery img {
     height: 200px;
     width: 200px;
-    -o-object-fit: none;
-       object-fit: none;
-    -o-object-position: center;
-       object-position: center;
+    object-fit: none;
+    object-position: center;
     cursor: pointer; }
 
 @media (max-width: 1035px) {
@@ -149,15 +138,9 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   display: none; }
   .test-overlay .modal {
     max-width: 1000px;
@@ -177,15 +160,11 @@ body {
     .test-overlay .modal .photo-container {
       width: 100%;
       height: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 50%;
         height: 100%;
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        flex: 1;
         padding-right: 55px; }
         .test-overlay .modal .photo-container .modal-photo img {
           max-width: 100%;
@@ -198,17 +177,10 @@ body {
         padding-top: 0;
         font-family: "Space Mono", monospace;
         font-size: 50px;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                    -ms-grid-row-align: center;
-                align-items: center;
+        align-items: center;
         vertical-align: top;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-flex: 2;
-            -ms-flex: 2;
-                flex: 2; }
+        justify-content: center;
+        flex: 2; }
         .test-overlay .modal .photo-container .modal-info p {
           margin-top: 10px; }
 
@@ -216,19 +188,11 @@ body {
   .test-overlay .modal {
     width: 370px;
     height: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-                -ms-grid-row-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    align-items: center;
+    justify-content: center; }
     .test-overlay .modal .photo-container {
       height: auto;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
+      flex-direction: column; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 100%;
         margin-right: 0px;
@@ -240,19 +204,11 @@ body {
   .test-overlay .modal {
     width: 300px;
     height: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-                -ms-grid-row-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    align-items: center;
+    justify-content: center; }
     .test-overlay .modal .photo-container {
       height: auto;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
+      flex-direction: column; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 100%;
         padding-right: 0px;
@@ -263,26 +219,20 @@ body {
   .test-overlay .modal {
     width: 200px;
     height: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-                -ms-grid-row-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    align-items: center;
+    justify-content: center; }
     .test-overlay .modal .ion-close-round {
       top: -30px;
       right: -30px;
       font-size: 30px; }
     .test-overlay .modal .photo-container {
       height: auto;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
+      flex-direction: column; }
       .test-overlay .modal .photo-container .modal-photo {
         max-width: 100%;
         padding-right: 0px;
         width: 100%; }
       .test-overlay .modal .photo-container .modal-info {
         font-size: 15px; } }
+
+/*# sourceMappingURL=main.css.map */

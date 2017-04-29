@@ -32,22 +32,29 @@ body
     margin-bottom: 10px
     background: black
     color: $green
+    border-radius: 10px
     font-size: 100px
     font-family: 'Roboto', sans-serif
     text-transform: uppercase
+
 
   h2
     display: inline-block
     padding: 20px
     margin-top: -20px
+    color: $green
     font-family: 'Space Mono', monospace
     font-size: 30px
     cursor: pointer
     text-transform: uppercase
+    border-radius: 10px
     transition: all 200ms ease-in-out
     &:hover
       background: $green
-
+      color: black
+    &:active
+      background: $green
+      color: black
 @media (max-width: 1030px)
   .title-container
     margin-left: 0
