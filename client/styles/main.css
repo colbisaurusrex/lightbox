@@ -27,6 +27,7 @@ body {
     margin-bottom: 10px;
     background: black;
     color: #67FFB8;
+    border-radius: 10px;
     font-size: 100px;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase; }
@@ -34,14 +35,17 @@ body {
     display: inline-block;
     padding: 20px;
     margin-top: -20px;
+    color: #67FFB8;
     font-family: "Space Mono", monospace;
     font-size: 30px;
     cursor: pointer;
     text-transform: uppercase;
+    border-radius: 10px;
     -webkit-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out; }
     .title-container h2:hover {
-      background: #67FFB8; }
+      background: #67FFB8;
+      color: black; }
 
 @media (max-width: 1030px) {
   .title-container {
