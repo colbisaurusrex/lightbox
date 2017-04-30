@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './client/js/app.js'),
@@ -33,8 +34,7 @@ module.exports = {
     ],
   },
   //TODO: minify the code
-  plugins: [new HtmlWebpackPlugin({
-    title: 'Lightbox',
-    template: 'client/template.html'
-  })],
+  plugins: [new HtmlWebpackPlugin({ title: 'Lightbox',template: 'client/template.html'}),
+            new UglifyJSPlugin({compress: true})
+            ],
 };
