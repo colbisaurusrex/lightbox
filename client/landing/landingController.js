@@ -1,7 +1,7 @@
 require('../js/service.js');
 
 angular.module('landing', ['shareState'])
-  .controller('landingController', function ($scope, $http, $location, storePhotos) {
+  .controller('landingController', ['$scope', '$http', '$location', 'storePhotos', function ($scope, $http, $location, storePhotos) {
     $scope.pingFlickr = () => {
       //Normally, I would never upload my api key. However, I am ok with it for the purpose of this challenge, it has no financial burden and I can cancel it at any time
       // - Solution 1: Set it as an environment variable, and ping my node server to send back the api key. Then construct the flickr api url based on the key sent back
@@ -17,4 +17,5 @@ angular.module('landing', ['shareState'])
     $scope.viewGallery = () => {
       $location.path('/gallery')
     }
-  });
+  }]);
+

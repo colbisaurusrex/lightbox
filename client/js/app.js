@@ -9,7 +9,7 @@ const landingHTML = require('../landing/landing.html');
 const galleryHTML = require('../gallery/gallery.html');
 
 angular.module('lightbox', ['ngRoute', 'landing', 'gallery', 'angularUtils.directives.dirPagination'])
-  .config(function ($routeProvider, paginationTemplateProvider) {
+  .config(['$routeProvider', 'paginationTemplateProvider',function ($routeProvider, paginationTemplateProvider) {
     paginationTemplateProvider.setString(require('../gallery/dirPagination.tpl.html'));
     $routeProvider
     .when('/', {
@@ -21,4 +21,4 @@ angular.module('lightbox', ['ngRoute', 'landing', 'gallery', 'angularUtils.direc
       controller: 'galleryController',
     })
     //TODO: add html to render in case of errors
-  })
+  }])
