@@ -11,7 +11,7 @@ module.exports = {
     loaders: [
       {
         test: /\.(css|sass)$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        loaders: 'style-loader!css-loader!sass-loader',
         exclude: /node_modules/,
       },
       {
@@ -24,7 +24,12 @@ module.exports = {
         loader: 'url-loader',
         query: { mimetype: 'image/png' },
         exclude: /node_modules/,
-      }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
     ],
   },
   //TODO: minify the code
