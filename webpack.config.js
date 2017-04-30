@@ -34,7 +34,15 @@ module.exports = {
     ],
   },
   //TODO: minify the code
-  plugins: [new HtmlWebpackPlugin({ title: 'Lightbox',template: 'client/template.html'}),
-            new UglifyJSPlugin({compress: true})
-            ],
+  plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Lightbox',
+        template: 'client/template.html'}),
+      new UglifyJSPlugin({
+        minimize: true,
+        compress: {
+          warnings: false
+        }
+      })
+  ],
 };
